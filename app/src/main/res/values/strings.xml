@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">sipimo</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="carade">--made by carade--</string>
+    <string name="terms">Agree with Terms &amp; Condition</string>
+    <string name="desc">Remember SIPIMO \n Remember to Take Medicine</string>
+    <string name="paragraf">Log in or Sign up to get help with remembering to take your medication</string>
+</resources>

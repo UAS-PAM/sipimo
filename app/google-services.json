@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "73776868260",
+    "project_id": "sipimo-pam",
+    "storage_bucket": "sipimo-pam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73776868260:android:277ab48e3e38f6e6886f31",
+        "android_client_info": {
+          "package_name": "com.example.sipimo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAA7r4D1KEOaxo3y9dBJVTRNBShcZdjxGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
