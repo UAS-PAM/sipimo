@@ -26,7 +26,8 @@ class SignUp : AppCompatActivity() {
     private lateinit var registerBtn: Button
     private lateinit var terms: CheckBox
     private lateinit var auth: FirebaseAuth
-    private lateinit var database: DatabaseReference
+    private lateinit var database: FirebaseDatabase
+    private lateinit var myRef: DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -45,7 +46,8 @@ class SignUp : AppCompatActivity() {
         repeatPasswordEditText = findViewById(R.id.etRepeatPassword)
         registerBtn = findViewById(R.id.registerBtn)
         terms = findViewById(R.id.cbTerms)
-        database = FirebaseDatabase.getInstance("https://sipimo-pam-default-rtdb.asia-southeast1.firebasedatabase.app/").reference
+        database = FirebaseDatabase.getInstance("https://sipimo-pam-default-rtdb.asia-southeast1.firebasedatabase.app/")
+        myRef = database.getReference("users")
         auth = FirebaseAuth.getInstance()
 
         registerBtn.setOnClickListener {
@@ -79,15 +81,20 @@ class SignUp : AppCompatActivity() {
             auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) {
                 if (it.isSuccessful){
                     val userId = auth.currentUser?.uid
-                    val user = UserRegis(username, email, fullname)
-                    userId?.let {
-                        database.child("users").child(it).setValue(user)
+                    val user = userId?.let {
+                        User(userId, username, email, fullname)
                     }
-                    Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this, MainActivity::class.java))
-                    finish()
+                    if (userId != null) {
+                        myRef.child(userId).setValue(user).addOnCompleteListener{
+                            Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()
+                            startActivity(Intent(this, MainActivity::class.java))
+                            finish()
+                        }
+                    } else {
+                        Toast.makeText(this, "Registration failed", Toast.LENGTH_SHORT).show()
+                    }
                 } else {
-                    Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Registration failed", Toast.LENGTH_SHORT).show()
                 }
             }
         }
@@ -100,6 +107,5 @@ class SignUp : AppCompatActivity() {
             finish()
         }
     }
-    data class UserRegis(val username: String, val email: String, val fullname: String)
 }
 
