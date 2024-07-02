@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var show: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -18,6 +19,9 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        show = findViewById(R.id.show)
+        val username = intent.getStringExtra("username")
+        show.text = "Selamat datang, " + username
     }
 
 }

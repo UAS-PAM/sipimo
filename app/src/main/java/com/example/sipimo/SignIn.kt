@@ -24,7 +24,8 @@ class SignIn : AppCompatActivity() {
     private lateinit var loginBtn: Button
     private lateinit var forgetBtn: Button
     private lateinit var auth: FirebaseAuth
-    private lateinit var database: DatabaseReference
+    private lateinit var database: FirebaseDatabase
+    private lateinit var myRef: DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -40,25 +41,24 @@ class SignIn : AppCompatActivity() {
         loginBtn = findViewById(R.id.loginBtn)
         forgetBtn = findViewById(R.id.forgetBtn)
         auth = FirebaseAuth.getInstance()
-        database = FirebaseDatabase.getInstance("https://sipimo-pam-default-rtdb.asia-southeast1.firebasedatabase.app/").reference
+        database = FirebaseDatabase.getInstance("https://sipimo-pam-default-rtdb.asia-southeast1.firebasedatabase.app/")
+        myRef = database.getReference("users")
 
         loginBtn.setOnClickListener {
             val email = emailEditText.text.toString().trim()
-            val pasword = passwordEditText.text.toString().trim()
+            val password = passwordEditText.text.toString().trim()
 
-            if (email.isEmpty() || pasword.isEmpty()){
+            if (email.isEmpty() || password.isEmpty()){
                 Toast.makeText(this, "Please enter email and password", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            auth.signInWithEmailAndPassword(email, pasword).addOnCompleteListener(this){
+            auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this){
                 if (it.isSuccessful){
                     val userId = auth.currentUser?.uid
                     userId?.let {
                         getUserData(userId)
                     }
-                    startActivity(Intent(this@SignIn, MainActivity::class.java))
-                    finish()
                 } else {
                     Toast.makeText(this, "Login failed: ${it.exception?.message}", Toast.LENGTH_SHORT).show()
                 }
@@ -74,11 +74,12 @@ class SignIn : AppCompatActivity() {
         }
     }
     private fun getUserData(userId: String){
-        database.child("users").child(userId).addListenerForSingleValueEvent(object : ValueEventListener{
+        myRef.child(userId).addListenerForSingleValueEvent(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 val user = snapshot.getValue(User::class.java)
                 user?.let {
                     val intent = Intent(this@SignIn, MainActivity::class.java)
+                    intent.putExtra("username", user.username)
                     startActivity(intent)
                     finish()
                 }
@@ -90,6 +91,5 @@ class SignIn : AppCompatActivity() {
         })
 
     }
-    data class User(val username: String = "", val email: String = "")
 }
 
