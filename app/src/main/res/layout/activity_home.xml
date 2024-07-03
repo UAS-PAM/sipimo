@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="#FFFFFFFF"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollviewhome"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#FFFFFFFF"
+            android:paddingTop="37dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="41dp"
+                    android:layout_marginHorizontal="26dp">
+
+                    <ImageView
+                        android:id="@+id/logoRegister"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:elevation="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.484"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.118"
+                        app:srcCompat="@drawable/headerlogo"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/element7_home"
+                    android:paddingHorizontal="8dp"
+                    android:layout_marginBottom="20dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/element8_home"
+                        android:paddingVertical="9dp"
+                        android:paddingHorizontal="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingHorizontal="2dp"
+                            android:layout_marginEnd="4dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:textColor="#000000"
+                                android:textSize="22sp"
+                                android:layout_marginBottom="6dp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="Nama Penyakit" />
+
+                            <TextView
+                                android:textColor="#000000"
+                                android:textSize="20sp"
+                                android:layout_marginBottom="15dp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="nama obat" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/btnDoit1"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="11dp"
+                                    android:background="@drawable/element2_home"
+                                    android:gravity="center_horizontal"
+                                    android:text="Do It"
+                                    android:orientation="vertical"
+                                    android:paddingVertical="12dp"/>
+
+                                <Button
+                                    android:id="@+id/btnHistory1"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="11dp"
+                                    android:text="History"
+                                    android:textSize="12dp"
+                                    android:background="@drawable/element3_home"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="vertical"
+                                    android:paddingVertical="12dp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="93dp"
+                            android:layout_height="wrap_content"
+                            android:clipChildren="false"
+                            android:clipToPadding="false">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clipChildren="false"
+                                android:clipToPadding="false"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:background="@drawable/element5_home"
+                                    android:paddingTop="7dp"
+                                    android:paddingBottom="74dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:textColor="#000000"
+                                        android:textSize="20sp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="wrap_content"
+                                        android:text="PERIOD" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginBottom="-3dp"
+                                android:layout_marginStart="0dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_width="92dp"
+                                android:layout_height="76dp"
+                                android:background="@drawable/element6_home"
+                                android:paddingHorizontal="13dp"
+                                android:clipChildren="false"
+                                android:clipToPadding="false"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:textColor="#FBE6CF"
+                                    android:textSize="14sp"
+                                    android:layout_marginTop="31dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:text="MORNING" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/element7_home"
+                    android:paddingHorizontal="8dp"
+                    android:layout_marginBottom="20dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/element8_home"
+                        android:paddingVertical="9dp"
+                        android:paddingHorizontal="12dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginBottom="9dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingHorizontal="2dp"
+                            android:layout_marginEnd="4dp"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:textColor="#000000"
+                                android:textSize="22sp"
+                                android:layout_marginBottom="6dp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="Nama Penyakit" />
+
+                            <TextView
+                                android:textColor="#000000"
+                                android:textSize="20sp"
+                                android:layout_marginBottom="15dp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="nama obat" />
+
+                            <LinearLayout
+                                android:id="@+id/rhhahcu6xrrd"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:clipChildren="false"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/btnDoit2"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="11dp"
+                                    android:background="@drawable/element2_home"
+                                    android:gravity="center_horizontal"
+                                    android:text="Do It"
+                                    android:orientation="vertical"
+                                    android:paddingVertical="12dp"/>
+
+                                <Button
+                                    android:id="@+id/btnHistory2"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="11dp"
+                                    android:text="History"
+                                    android:textSize="12dp"
+                                    android:background="@drawable/element3_home"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="vertical"
+                                    android:paddingVertical="12dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="93dp"
+                            android:layout_height="wrap_content"
+                            android:clipChildren="false"
+                            android:clipToPadding="false">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clipChildren="false"
+                                android:clipToPadding="false"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:background="@drawable/element5_home"
+                                    android:paddingTop="7dp"
+                                    android:paddingBottom="74dp"
+                                    android:clipChildren="false"
+                                    android:clipToPadding="false"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:textColor="#000000"
+                                        android:textSize="20sp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="wrap_content"
+                                        android:text="PERIOD" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginBottom="-3dp"
+                                android:layout_marginStart="0dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_width="92dp"
+                                android:layout_height="76dp"
+                                android:background="@drawable/element2_home"
+                                android:paddingHorizontal="22dp"
+                                android:clipChildren="false"
+                                android:clipToPadding="false"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:textColor="#FBE6CF"
+                                    android:textSize="16sp"
+                                    android:layout_marginTop="32dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:text="NOON" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/element7_home"
+                    android:paddingHorizontal="7dp"
+                    android:layout_marginBottom="85dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/element8_home"
+                        android:paddingVertical="9dp"
+                        android:paddingHorizontal="12dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginBottom="9dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingHorizontal="2dp"
+                            android:layout_marginEnd="4dp"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/rhkagvk52ido"
+                                android:textColor="#000000"
+                                android:textSize="22sp"
+                                android:layout_marginBottom="6dp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="Nama Penyakit" />
+                            <TextView
+                                android:textColor="#000000"
+                                android:textSize="20sp"
+                                android:layout_marginBottom="15dp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="nama obat" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:clipChildren="false"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/btnDoit3"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="11dp"
+                                    android:background="@drawable/element2_home"
+                                    android:gravity="center_horizontal"
+                                    android:text="Do It"
+                                    android:orientation="vertical"
+                                    android:paddingVertical="12dp"/>
+
+                                <Button
+                                    android:id="@+id/btnHistory3"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="11dp"
+                                    android:text="History"
+                                    android:textSize="12dp"
+                                    android:background="@drawable/element3_home"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="vertical"
+                                    android:paddingVertical="12dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_width="93dp"
+                            android:layout_height="wrap_content"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clipChildren="false"
+                                android:clipToPadding="false"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:background="@drawable/element5_home"
+                                    android:paddingTop="7dp"
+                                    android:paddingBottom="74dp"
+                                    android:clipChildren="false"
+                                    android:clipToPadding="false"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:id="@+id/rn0g8uizdtmb"
+                                        android:textColor="#000000"
+                                        android:textSize="20sp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="wrap_content"
+                                        android:text="PERIOD"
+                                        />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginBottom="-3dp"
+                                android:layout_marginStart="0dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_width="92dp"
+                                android:layout_height="76dp"
+                                android:background="@drawable/element3_home"
+                                android:paddingHorizontal="22dp"
+                                android:clipChildren="false"
+                                android:clipToPadding="false"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:id="@+id/rncu05dngie"
+                                    android:textColor="#FBE6CF"
+                                    android:textSize="16sp"
+                                    android:layout_marginTop="32dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:text="NIGHT"
+                                    />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
