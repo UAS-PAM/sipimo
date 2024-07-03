@@ -6,4 +6,6 @@
     <color name="input">#FBE6CF</color>
     <color name="btnPrimary">#5B2F63</color>
     <color name="success">#468A90</color>
+    <color name="denied">#F73B3E</color>
+
 </resources>
