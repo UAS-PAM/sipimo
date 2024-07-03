@@ -17,7 +17,7 @@
         android:layout_marginLeft="10dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/User_stng"
+        android:src="@drawable/gmbr_user"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
