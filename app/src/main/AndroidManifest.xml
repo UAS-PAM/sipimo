@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Sipimo"
         tools:targetApi="31">
         <activity
+            android:name=".Schedule"
+            android:exported="false" />
+        <activity
             android:name=".SignUp"
             android:exported="false" />
         <activity

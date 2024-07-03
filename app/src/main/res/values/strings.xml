@@ -6,4 +6,24 @@
     <string name="terms">Agree with Terms &amp; Condition</string>
     <string name="desc">Remember SIPIMO \n Remember to Take Medicine</string>
     <string name="paragraf">Log in or Sign up to get help with remembering to take your medication</string>
+    <string-array name="drugtype_array">
+        <item>Select item</item>
+        <item>Capsule</item>
+        <item>Syrup</item>
+        <item>Tablet</item>
+    </string-array>
+    <string-array name="duringtype_array">
+        <item>Select item</item>
+        <item>A Day</item>
+        <item>A Week</item>
+        <item>A Month</item>
+    </string-array>
+    <string-array name="start_array">
+        <item>Select item</item>
+        <item>Morning</item>
+        <item>Noon</item>
+        <item>Night</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
