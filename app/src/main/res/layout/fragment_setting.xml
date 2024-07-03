@@ -40,7 +40,7 @@
             app:cornerRadius="20dp"
             android:fontFamily="@font/poppinssemibold"
             android:textAlignment="textStart"
-            android:textSize="18sp" />
+            android:textSize="18sp"/>
 
         <!-- About Us Button -->
         <Button
