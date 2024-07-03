@@ -306,7 +306,7 @@
                                 android:layout_alignParentBottom="true"
                                 android:layout_width="92dp"
                                 android:layout_height="76dp"
-                                android:background="@drawable/element6_home"
+                                android:background="@drawable/element2_home"
                                 android:paddingHorizontal="22dp"
                                 android:clipChildren="false"
                                 android:clipToPadding="false"
