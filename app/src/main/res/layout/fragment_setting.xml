@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".Setting">
+    tools:context=".menu_setting">
 
     <!-- ImageView Section -->
     <ImageView
@@ -40,7 +40,7 @@
             app:cornerRadius="20dp"
             android:fontFamily="@font/poppinssemibold"
             android:textAlignment="textStart"
-            android:textSize="18sp" />
+            android:textSize="18sp"/>
 
         <!-- About Us Button -->
         <Button

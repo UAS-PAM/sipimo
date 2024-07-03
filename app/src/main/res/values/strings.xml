@@ -2,6 +2,7 @@
     <string name="app_name">sipimo</string>
     <string name="register">Register</string>
     <string name="login">Login</string>
+    <string name="edit_password">Edit Password</string>
     <string name="carade">Copyright © 2024 Carade Inc. All rights reserved.</string>
     <string name="terms">Agree with Terms &amp; Condition</string>
     <string name="desc">Remember SIPIMO \n Remember to Take Medicine</string>
