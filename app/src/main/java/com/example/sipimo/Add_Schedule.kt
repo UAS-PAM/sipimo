@@ -124,7 +124,7 @@ class Add_Schedule : Fragment() {
                 return@setOnClickListener
             }
 
-            val schedule = Schedule(userId, diseaseName, medicineName, drugType, amountDrug, used, during, start)
+            val schedule = Schedule(userId, scheduleId, diseaseName, medicineName, drugType, amountDrug, used, during, start)
 
             myRef.child(scheduleId).setValue(schedule).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
