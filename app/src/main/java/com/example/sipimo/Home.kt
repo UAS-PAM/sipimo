@@ -34,6 +34,7 @@ class Home : Fragment() {
     private lateinit var itemList: MutableList<Schedule>
     private lateinit var database: FirebaseDatabase
     private lateinit var myRef: DatabaseReference
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,13 +58,14 @@ class Home : Fragment() {
         recyclerView.adapter = schduleAdapter
         database = FirebaseDatabase.getInstance("https://sipimo-pam-default-rtdb.asia-southeast1.firebasedatabase.app/")
         myRef = database.getReference("schedules")
+        auth = FirebaseAuth.getInstance()
 
         myRef.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 itemList.clear()
                 for (snapshot in snapshot.children){
                     val item =snapshot.getValue(Schedule::class.java)
-                    if (item != null)   {
+                    if (item != null && item.userId == auth.currentUser!!.uid)   {
                         itemList.add(item)
                     }
 
