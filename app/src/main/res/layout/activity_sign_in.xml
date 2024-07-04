@@ -67,11 +67,12 @@
 
     <Button
         android:id="@+id/forgetBtn"
-        android:layout_width="165dp"
+        android:layout_width="270dp"
         android:layout_height="45dp"
         android:background="@android:color/transparent"
-        android:text="Forget Password?"
-        android:textSize="11dp"
+        android:text="Harus Ingat password"
+        android:textSize="12dp"
+        android:layout_marginLeft="90dp"
         android:fontFamily="@font/poppinsregular"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"

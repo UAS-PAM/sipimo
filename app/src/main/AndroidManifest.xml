@@ -5,15 +5,17 @@
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sipimo"
-        tools:targetApi="31"
-        android:enableOnBackInvokedCallback="true">
-
+        tools:targetApi="31">
+        <activity
+            android:name=".history"
+            android:exported="false" />
         <activity
             android:name=".edit_password"
             android:exported="false" />
