@@ -7,6 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.Firebase
+import com.google.firebase.auth.auth
 
 class SplashScreen : AppCompatActivity() {
     private val SPLASH_TIME_OUT: Long = 3000
@@ -20,9 +22,17 @@ class SplashScreen : AppCompatActivity() {
             insets
         }
 
-        Handler().postDelayed({
-            startActivity(Intent(this, LandingPage::class.java))
-            finish()
-        }, SPLASH_TIME_OUT)
+        val user = Firebase.auth.currentUser
+        if (user == null) {
+            Handler().postDelayed({
+                startActivity(Intent(this, LandingPage::class.java))
+                finish()
+            }, SPLASH_TIME_OUT)
+        } else {
+            Handler().postDelayed({
+                startActivity(Intent(this, MainActivity::class.java))
+                finish()
+            }, SPLASH_TIME_OUT)
+        }
     }
 }
