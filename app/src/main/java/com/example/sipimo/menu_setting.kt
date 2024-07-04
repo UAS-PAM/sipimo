@@ -20,8 +20,8 @@ class menu_setting : AppCompatActivity() {
         setContentView(R.layout.fragment_setting)
 
         mAuth = FirebaseAuth.getInstance()
-        userButton = findViewById(R.id.userButton)
-        logoutButton = findViewById(R.id.logout)
+        userButton = findViewById(R.id.userButton) // Pastikan ID ini sesuai dengan yang di XML
+        logoutButton = findViewById(R.id.logout)   // Pastikan ID ini sesuai dengan yang di XML
         database = FirebaseDatabase.getInstance("https://sipimo-pam-default-rtdb.asia-southeast1.firebasedatabase.app/")
 
         userButton.setOnClickListener {
@@ -31,7 +31,7 @@ class menu_setting : AppCompatActivity() {
 
         logoutButton.setOnClickListener {
             Log.d("menu_setting", "Logout button clicked")
-            FirebaseAuth.getInstance().signOut()
+            mAuth.signOut() // Gunakan mAuth untuk sign out
             Log.d("menu_setting", "Firebase sign out")
             sendToLandingPage()
         }
